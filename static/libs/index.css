@@ -1,0 +1,78 @@
+
+.center{
+  margin-top: 50px;
+}
+.rp{
+  font-weight: 700;
+  text-align: center !important;
+}
+.titleClz{
+  color: black;
+  text-align: center !important;
+}
+
+.rowClz{
+  height: 30px;
+}
+.bcm{
+  background-color: #ffefb2 !important;
+}
+.physics{
+  background-color: #bec0bf !important;
+}
+.physicsh{
+  background-color: #b34727 !important;
+  color: #dfedf7;
+}
+
+.power3{
+  background-color:#ffaa3b
+}
+.power5{
+  background-color:#ff2d22;
+  color: #dfedf7;
+}
+.GND{
+  background-color: #000000;
+  color: #dfedf7;
+}
+.SDA{
+  background-color: #01fdff
+}
+.SCL{
+  background-color: #01fdff
+}
+.GPIO{
+  background-color: #9ce159
+}
+.TXD{
+  background-color: #0533ff;
+  color: #dfedf7
+}
+.RXD{
+  background-color: #0533ff;
+  color: #dfedf7
+}
+.MOSI{
+  background-color:#9c44b8;
+  color: #dfedf7;
+}
+.MISO{
+  background-color:#9c44b8;
+  color: #dfedf7;
+}
+.SCLK{
+  background-color:#9c44b8;
+  color: #dfedf7;
+}
+.CE{
+  background-color:#9c44b8;
+  color: #dfedf7;
+}
+
+.el-switch__core{
+  border-radius:0% !important;
+}
+.el-switch__core:after{
+  border-radius:0% !important;
+}
