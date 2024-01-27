@@ -12,8 +12,12 @@ def get_version():
         return v
 #判断是否树莓派5
 def version_is5():
-    return get_version().find('5')>-1
-
+    try:
+        return get_version().find('5')>-1
+    except Exception as e:
+        return False
+    else:
+        return False
 vvv= 5 if version_is5() else 4
 
 def physics_to_bcm(physics):
