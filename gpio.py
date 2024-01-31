@@ -29,36 +29,36 @@ def physics_to_bcm(physics):
 
 # 判断这个io口是否导出了
 def export_over(number):
-    return os.path.exists("/sys/class/gpio/gpio"+number)
+    return os.path.exists("/sys/class/gpio/gpio"+str(number))
 
 # 导出IO口
 def export_io(number):
     if export_over(number):
         return
-    append_file("/sys/class/gpio/export",number)
+    append_file("/sys/class/gpio/export",str(number))
 
 #销毁IO口
 def unexport_io(number):
     if not export_over(number):
         return
-    append_file('/sys/class/gpio/unexport',number)
+    append_file('/sys/class/gpio/unexport',str(number))
 
 # 设置io口方向
 def set_direction(number,d):
     export_io(number)
-    append_file('/sys/class/gpio/gpio'+number+'/direction',d)
+    append_file('/sys/class/gpio/gpio'+str(number)+'/direction',d)
 # 获取当前IO口方向
 def get_direction(number):
     export_io(number)
-    return read_file('/sys/class/gpio/gpio'+number+'/direction')
+    return read_file('/sys/class/gpio/gpio'+str(number)+'/direction')
 #读取IO口数值
 def get_val(number):
     export_io(number)
-    return read_file('/sys/class/gpio/gpio'+number+'/value')
+    return read_file('/sys/class/gpio/gpio'+str(number)+'/value')
 #设置IO口数值
 def set_val(number,val):
     export_io(number)
-    append_file('/sys/class/gpio/gpio'+number+'/value',val)
+    append_file('/sys/class/gpio/gpio'+str(number)+'/value',val)
 
 # 一次性获取所有GPIO口的方向和当前值
 def get_all():
